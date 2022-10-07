@@ -15,9 +15,12 @@ namespace OwsDemo
             //Handle the message from the client
 
             //Example of JSON serialization with the client
-            //var json = Encoding.UTF8.GetString(message.Array, message.Offset, message.Count);
-            //Use something like Json.Net to read the json
-            return Task.CompletedTask;
+            var json = Encoding.UTF8.GetString(message.Array, message.Offset, message.Count);
+
+            var toSend = Encoding.UTF8.GetBytes(json);
+
+            //Echo the message back to the client as text
+            return SendText(toSend, true);
         }
     }
 }
