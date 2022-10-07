@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Owin.WebSocket", "Owin.WebSocket\Owin.WebSocket.csproj", "{B1D742F7-39FA-498C-B22E-1A7A61C301E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{E8AAA2FB-EA74-4120-B0A0-838926422AF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8DCED5B7-4C62-4900-B899-4DA1C6A238CF}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwsDemo", "OwsDemo\OwsDemo.csproj", "{480A57B0-3923-47F4-8EB7-6FFFE33FDE37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1D742F7-39FA-498C-B22E-1A7A61C301E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D742F7-39FA-498C-B22E-1A7A61C301E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D742F7-39FA-498C-B22E-1A7A61C301E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D742F7-39FA-498C-B22E-1A7A61C301E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8AAA2FB-EA74-4120-B0A0-838926422AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8AAA2FB-EA74-4120-B0A0-838926422AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8AAA2FB-EA74-4120-B0A0-838926422AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8AAA2FB-EA74-4120-B0A0-838926422AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{480A57B0-3923-47F4-8EB7-6FFFE33FDE37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480A57B0-3923-47F4-8EB7-6FFFE33FDE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480A57B0-3923-47F4-8EB7-6FFFE33FDE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480A57B0-3923-47F4-8EB7-6FFFE33FDE37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89CA29A1-91F3-4066-9713-E560BDEA0C90}
+	EndGlobalSection
+EndGlobal
