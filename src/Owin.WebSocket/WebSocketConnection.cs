@@ -250,15 +250,16 @@ namespace Owin.WebSocket
             await OnOpenAsync();
 
             var buffer = new byte[MaxMessageSize];
-            Tuple<ArraySegment<byte>, WebSocketMessageType> received = null;
-
+            WebSocketMessageType msgType;
             do
             {
+                ArraySegment<byte> buf;
                 try
                 {
-                    received = await mWebSocket.ReceiveMessage(buffer, mCancellToken.Token);
-                    if (received.Item1.Count > 0)
-                        await OnMessageReceived(received.Item1, received.Item2);
+
+                    (buf, msgType) = await mWebSocket.ReceiveMessage(buffer, mCancellToken.Token);
+                    if (buf.Count > 0)
+                        await OnMessageReceived(buf, msgType);
                 }
                 catch (TaskCanceledException)
                 {
@@ -285,7 +286,7 @@ namespace Owin.WebSocket
                     break;
                 }
             }
-            while (received.Item2 != WebSocketMessageType.Close);
+            while (msgType != WebSocketMessageType.Close);
 
             try
             {

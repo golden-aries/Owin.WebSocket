@@ -11,11 +11,11 @@ namespace OwsDemo
         {
             app.UseDefaultFiles();
             app.MapWebSocketRoute<MyWebSocket>("/ws");
-            app.Run(context =>
-            {
-                context.Response.ContentType = "text/plain";
-                return context.Response.WriteAsync("Hello World!");
-            });
+            //app.Run(context =>
+            //{
+            //    context.Response.ContentType = "text/plain";
+            //    return context.Response.WriteAsync("Hello World!");
+            //});
         }
     }
 }

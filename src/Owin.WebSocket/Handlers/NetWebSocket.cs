@@ -59,7 +59,7 @@ namespace Owin.WebSocket.Handlers
             return mWebSocket.CloseAsync(closeStatus, closeDescription, cancelToken);
         }
         
-        public async Task<Tuple<ArraySegment<byte>, WebSocketMessageType>> ReceiveMessage(byte[] buffer, CancellationToken cancelToken)
+        public async Task<(ArraySegment<byte>, WebSocketMessageType)> ReceiveMessage(byte[] buffer, CancellationToken cancelToken)
         {
             var count = 0;
             WebSocketReceiveResult result;
@@ -72,7 +72,7 @@ namespace Owin.WebSocket.Handlers
             }
             while (!result.EndOfMessage);
 
-            return new Tuple<ArraySegment<byte>, WebSocketMessageType>(new ArraySegment<byte>(buffer, 0, count), result.MessageType);
+            return (new ArraySegment<byte>(buffer, 0, count), result.MessageType);
         }
     }
 }
